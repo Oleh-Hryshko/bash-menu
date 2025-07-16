@@ -1,0 +1,4 @@
+Nmap=submenu:Nmap.subm
+Ffuf=submenu:Ffuf.subm
+Sqlmap=submenu:Sqlmap.subm
+Network Tools=submenu:Network Tools.subm

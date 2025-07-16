@@ -1,0 +1,6 @@
+Aggressive Scan (default 1000 ports, select IP)=nmap -v -A -sV <target_ip>;
+Aggressive Scan (select Port and IP)=nmap -v -A -sV  -p<target_port> <target_ip>;
+Aggressive Scan (Common Web Ports: 80,443,8080, select IP)=nmap -v -A -sV -p80,443,8080 <target_ip>;
+Basic OS and Version Scan (default 1000 ports, select IP)=nmap -v -sV -O <target_ip>;
+----------------=
+Custom parameters Scan (select params and IP)=nmap <nmap_params> <target_ip>;

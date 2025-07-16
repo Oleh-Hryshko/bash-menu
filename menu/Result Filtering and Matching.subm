@@ -1,0 +1,4 @@
+Filtering by Status Code (hide specific status codes)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -mc <status_codes> -fc <hide_codes>
+Filtering by Content Length (hide specific content lengths)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -fl <content_lengths>
+Match by Status Code (only show specific status codes)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -mc <status_codes>
+Match by Word Count (only show specific word counts)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -mw <word_counts>

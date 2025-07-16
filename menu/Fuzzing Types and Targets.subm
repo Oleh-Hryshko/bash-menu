@@ -1,0 +1,6 @@
+Basic Directory Brute-Force (wordlist, specify URL)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ"
+File Extension Brute-Force (wordlist, specify URL and extensions)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -e "<extensions>"
+URL Path Brute-Force (wordlist, specify URL)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ/subpath"
+HTTP Header Fuzzing (wordlist, specify URL and header)=ffuf -w <wordlist>:FUZZ -H "X-Forwarded-For: FUZZ" -u "<target_host>"
+POST Data Fuzzing (wordlist, specify URL and POST data)=ffuf -w <wordlist>:FUZZ -X POST -d "username=admin&password=FUZZ" -u "<target_host>/login"
+Recursive Directory Brute-Force (wordlist, specify URL)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -recursion

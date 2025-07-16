@@ -1,0 +1,4 @@
+Use Proxy (e.g., Burp Suite)=sqlmap -u "<target_url>" --proxy="http://127.0.0.1:8080"
+Tamper with Requests (bypass WAF/IDS)=sqlmap -u "<target_url>" --tamper=space2comment.py
+Automatic Batch Mode (answer all questions with default)=sqlmap -u "<target_url>" --batch
+Crawl Website (find more potential injection points)=sqlmap -u "<target_url>" --crawl=1

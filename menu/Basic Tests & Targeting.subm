@@ -1,0 +1,5 @@
+Basic SQLi Test (GET request)=sqlmap -u "<target_url>"
+Basic SQLi Test (POST request with data)=sqlmap -u "<target_url_login>" --data="username=<username>&password=<password>"
+Test with Custom HTTP Header (e.g., User-Agent)=sqlmap -u "<target_url>" --header="User-Agent: Mozilla/5.0"
+Test with Cookie (for authenticated sessions)=sqlmap -u "target_url_profile>" --cookie="PHPSESSID=<your_session_id>"
+Load HTTP Request from File (for complex requests)=sqlmap -r <request_txt>

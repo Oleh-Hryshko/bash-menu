@@ -1,0 +1,4 @@
+Ignoring Certificate Errors (for self-signed certs)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -k
+Proxying Requests (via Burp Suite or other proxy)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -x <proxy_host>:<proxy_port>
+Delay Between Requests (to avoid detection)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -p 0.1
+Verbose Output (show more details)=ffuf -w <wordlist>:FUZZ -u "<target_host>/FUZZ" -v

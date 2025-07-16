@@ -1,0 +1,1 @@
+Set Risk and Level (increase test intensity/aggressiveness)=sqlmap -u "<target_url>" --risk=3 --level=5

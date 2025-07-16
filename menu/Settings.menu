@@ -1,0 +1,2 @@
+Truncate Log=truncate -s <bytes> menu/menu.log
+Clear Log=> menu/menu.log

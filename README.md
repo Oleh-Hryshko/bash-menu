@@ -1,4 +1,4 @@
-# [Bash-menu – Dynamic CLI Menu System](https://www.youtube.com/watch?v=pwupYDSJ1S8))
+# [Bash-menu – Dynamic CLI Menu System](https://www.youtube.com/watch?v=pwupYDSJ1S8)
 
 This Bash script provides a dynamic, interactive command-line interface (CLI) menu system. It allows users to navigate through various options, execute commands, and manage persistent variables. The menu structure is built dynamically from external `.menu` and `.subm(enu)` files, enabling easy extension and customization without modifying the core script.
 

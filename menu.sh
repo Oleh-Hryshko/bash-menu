@@ -141,6 +141,7 @@ declare -ga menu_item_commands # Global array to store MENU commands in their or
 #   $4: Name of the variable holding the currently selected index (nameref)
 #   $5: Type of menu ("main_menu" or "submenu") for Backspace handling
 function show_menu {
+	trap - SIGINT
     local title="$1"
     declare -n items_array_ref="$2" # Indirect reference to the array of menu item names
     declare -n commands_array_ref="$3" # Indirect reference to the array of commands/functions
@@ -227,6 +228,8 @@ function show_menu {
                     # If the command is a shell function, execute it
                     "$command_to_run"
                 else
+                    # Return to Main Menu when pressed Ctrl+C
+					trap 'show_menu "Main menu" main_menu_items main_menu_commands main_menu_selected_index "main_menu"' SIGINT
                     # For other commands (from MENU files), execute them allowing variable substitution
                     execute_menu_command "$command_to_run" "${items_array_ref[$current_index]}"
                 fi
@@ -380,7 +383,6 @@ function execute_menu_command {
     echo -e "${YELLOW_BRIGHT}${BOLD}${REVERSE}\nExecuting: $menu_item_name${RESET}"
     echo -e "${CYAN}Command: $final_command${RESET}" # Show the final command before execution
 
-    #eval "$final_command" # Execute the constructed command
     output=$( { eval "$final_command" 2>&1 | tee /dev/tty; } )
     echo -e "\nStart: $(date '+%Y-%m-%d %H:%M:%S')" >> "${MENU_LOG_FILE}"
     echo -e "Executing: $menu_item_name" >> "${MENU_LOG_FILE}"
@@ -393,6 +395,7 @@ function execute_menu_command {
 function press_enter {
 	echo ""
     read -p "Press Enter to continue..."
+    trap - SIGINT
 	echo ""
 }
 
